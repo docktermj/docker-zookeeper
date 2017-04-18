@@ -11,12 +11,12 @@ RUN rm -rf /var/cache/apk/*
 
 RUN curl http://apache.mirrors.tds.net/zookeeper/zookeeper-3.4.10/zookeeper-3.4.10.tar.gz -o /tmp/zookeeper.tgz
 
+# TODO: verify download.
+
 # Extract zookeeper.
 
 RUN mkdir -p /opt/zookeeper
 RUN tar -xzf /tmp/zookeeper.tgz --strip-components=1 -C /opt/zookeeper
-
-# TODO: verify download.
 
 #  Copy sample configuration file.
 
